@@ -22,12 +22,7 @@
 	};
 
 	const switchStatusByIndex = (e: CustomEvent<number>) => {
-		todos = todos.map((todo, index) => {
-			if (index === e.detail) {
-				todo.done = !todo.done;
-			}
-			return todo;
-		});
+		todos[e.detail].done = !todos[e.detail].done;
 	};
 </script>
 
